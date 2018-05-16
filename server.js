@@ -6,14 +6,15 @@ const port  = process.env.PORT || 3000;
 
 app.set('view engine', 'hbs');
 
-app.get('/', (req, res) => {
-    res.send({
+app.get('/home', (req, res) => {
+    res.render('home.hbs', {
+        title: 'home',
         name: 'mandeep',
-        likes: [
-            'programming',
-            'cities'
-        ]
     });
+});
+
+app.get('/projects', (req, res) => {
+    res.render('projects.hbs', { projectTitle: 'project'})
 });
 
 app.get('/about', (req, res) => {
