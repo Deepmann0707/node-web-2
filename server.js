@@ -14,7 +14,7 @@ app.get('/home', (req, res) => {
 });
 
 app.get('/projects', (req, res) => {
-    res.render('projects.hbs', { projectTitle: 'project'})
+    res.render('projects.hbs', { projectTitle: 'project', name: 'rajinder'})
 });
 
 app.get('/about', (req, res) => {
